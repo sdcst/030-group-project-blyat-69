@@ -1,8 +1,43 @@
-import math
-
-def title_screen():
-    print("Welcome to the High School Calculator!")
-    print("-------------------------------------")
+def main():
+    title_screen()
+    while True:
+        print("\nMenu:")
+        print("1. Addition")
+        print("2. Subtraction")
+        print("3. Multiplication")
+        print("4. Divide")
+        print("5. Area Calculation")
+        print("6. Surface Area Calculation")
+        print("7. Interest Calculation")
+        print("8. BMI Calculation")
+        print("9. Instructions")
+        print("10. Quit")
+        
+        choice = input("Enter your choice: ")
+        
+        if choice == "1":
+            Addition()
+        elif choice == "2":
+            Subtraction()
+        elif choice == "3":
+            Multiplication()
+        elif choice == "4":
+            Divide()
+        elif choice == "5":
+            area()
+        elif choice == "6":
+            surface_area()
+        elif choice == "7":
+            interest()
+        elif choice == "8":
+            bmi()
+        elif choice == "9":
+            instructions()
+        elif choice == "10":
+            print("Thanks for using the Blyat69 Calculator!")
+            break
+        else:
+            print("Invalid choice! Try again.")
 
 def instructions():
     print("Instructions:")
@@ -11,24 +46,46 @@ def instructions():
     print("3. View the result.")
     print("4. Choose to perform another calculation or quit.")
 
-def volume():
-    print("\nVolume Calculations:")
-    shape = input("Choose shape (cube, sphere, cylinder): ").lower()
-    if shape == "cube":
-        side = float(input("Enter side length: "))
-        vol = side ** 3
-        print("Volume of the cube is:", vol)
-    elif shape == "sphere":
-        radius = float(input("Enter radius: "))
-        vol = (4/3) * math.pi * (radius ** 3)
-        print("Volume of the sphere is:", vol)
-    elif shape == "cylinder":
-        radius = float(input("Enter radius: "))
-        height = float(input("Enter height: "))
-        vol = math.pi * (radius ** 2) * height
-        print("Volume of the cylinder is:", vol)
-    else:
-        print("Invalid shape!")
+def title_screen():
+    print("Welcome to Blyat69's Calculator!")
+    print("-------------------------------------")
+            
+
+def Addition():
+    print("\nAddition Calculations:")
+    num1=float (input("Number #1: "))
+    num2=float (input("Number #2: "))
+    sum = float(num1) + float(num2)
+    print(num1, "+", num2, "=", (sum))
+
+def Subtraction():
+    print("\nSubtractiom Calculations:")
+    num1=float (input("Number #1: "))
+    num2=float (input("Number #2: "))
+    sum = float(num1) - float(num2)
+    print(num1, "-", num2, "=",(sum))
+
+
+
+def Multiplication():
+    print("\nMultiplication Calculations:")
+    num1=float (input("Number #1: "))
+    num2=float (input("Number #2: "))
+    sum = float(num1) * float(num2)
+    print(num1, "*", num2, "=", (sum))
+
+    
+    
+    
+def Divide():
+    print("\nDivide Calculations:")
+    num1=float (input("Number #1: "))
+    num2=float (input("Number #2: "))
+    sum = float(num1) / float(num2)
+    print(num1, "/", num2, "=", (sum))
+
+
+
 
 def surface_area():
     print("\nSurface Area Calculations:")
@@ -68,13 +125,7 @@ def area():
     else:
         print("Invalid shape!")
 
-def derivative():
-    print("\nDerivative Calculation:")
-    a = float(input("Enter coefficient (a): "))
-    n = float(input("Enter exponent (n): "))
-    x = float(input("Enter value of x: "))
-    der = a * n * (x ** (n - 1))
-    print("Derivative at x =", x, "is:", der)
+
 
 def interest():
     print("\nInterest Calculation:")
@@ -84,19 +135,9 @@ def interest():
     interest = (principal * rate * time) / 100
     print("Interest earned is:", interest)
 
-def tax():
-    print("\nTax Calculation:")
-    income = float(input("Enter income: "))
-    tax_rate = float(input("Enter tax rate (%): "))
-    tax_amount = (income * tax_rate) / 100
-    print("Tax amount is:", tax_amount)
 
-def earnings():
-    print("\nEarnings Calculation:")
-    hours = float(input("Enter hours worked: "))
-    wage = float(input("Enter hourly wage: "))
-    earnings = hours * wage
-    print("Total earnings are:", earnings)
+
+
 
 def bmi():
     print("\nBMI Calculation:")
@@ -105,46 +146,8 @@ def bmi():
     bmi = weight / (height ** 2)
     print("Your BMI is:", bmi)
 
-def main():
-    title_screen()
-    while True:
-        print("\nMenu:")
-        print("1. Volume Calculation")
-        print("2. Surface Area Calculation")
-        print("3. Area Calculation")
-        print("4. Derivative Calculation")
-        print("5. Interest Calculation")
-        print("6. Tax Calculation")
-        print("7. Earnings Calculation")
-        print("8. BMI Calculation")
-        print("9. Instructions")
-        print("10. Quit")
-        
-        choice = input("Enter your choice: ")
-        
-        if choice == "1":
-            volume()
-        elif choice == "2":
-            surface_area()
-        elif choice == "3":
-            area()
-        elif choice == "4":
-            derivative()
-        elif choice == "5":
-            interest()
-        elif choice == "6":
-            tax()
-        elif choice == "7":
-            earnings()
-        elif choice == "8":
-            bmi()
-        elif choice == "9":
-            instructions()
-        elif choice == "10":
-            print("Thanks for using the High School Calculator!")
-            break
-        else:
-            print("Invalid choice! Try again.")
 
 if __name__ == "__main__":
     main()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+
+
